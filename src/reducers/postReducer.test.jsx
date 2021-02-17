@@ -1,4 +1,4 @@
-import { createPost } from '../actions/postActions';
+import { createPost, deletePost } from '../actions/postActions';
 import reducer from './postReducer';
 
 describe('Blog Reducer', () => {
@@ -19,6 +19,26 @@ describe('Blog Reducer', () => {
         title: 'Wednesday Post',
         body: 'Dear Diary, today is Wednesday.'
       }]
+    });
+  });
+
+  it('Deletes a post using DELETE_POST action in Reducer', () => {
+    const state = {
+      posts: [{
+        title: 'Wednesday Post',
+        body: 'Dear Diary, today is Wednesday.'
+      }]
+    };
+
+    const action = deletePost({
+      title: 'Wednesday Post',
+      body: 'Dear Diary, today is Wednesday.'
+    });
+    
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual({
+      posts: []
     });
   });
 });
