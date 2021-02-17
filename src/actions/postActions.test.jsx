@@ -1,4 +1,9 @@
-import { CREATE_POST, createPost } from './postActions.js';
+import { 
+  CREATE_POST, 
+  createPost, 
+  DELETE_POST, 
+  deletePost 
+} from './postActions.js';
 
 describe('Blog Actions', () => {
   it('Creates a blog post Action', () => {
