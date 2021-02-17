@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders App 1`] = `
+exports[`PostForm component renders PostForm 1`] = `
 <DocumentFragment>
   <form>
     <input
