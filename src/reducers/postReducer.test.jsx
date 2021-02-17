@@ -30,10 +30,7 @@ describe('Blog Reducer', () => {
       }]
     };
 
-    const action = deletePost({
-      title: 'Wednesday Post',
-      body: 'Dear Diary, today is Wednesday.'
-    });
+    const action = deletePost('Wednesday Post');
     
     const newState = reducer(state, action);
 
