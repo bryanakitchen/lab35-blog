@@ -11,8 +11,8 @@ export default function PostForm() {
 
   const handleSubmit = e => {
     e.preventDefault;
-
-    dispatch(createPost({ title, body }));
+    const post = { title, body };
+    dispatch(createPost(post));
   };
 
   return (
