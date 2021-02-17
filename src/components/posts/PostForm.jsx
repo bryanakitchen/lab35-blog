@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from '../../state/BlogProvider';
 import { createPost } from '../../actions/postActions';
 
@@ -40,7 +39,3 @@ export default function PostForm() {
     </>
   );
 }
-
-PostForm.propTypes = {
-
-};

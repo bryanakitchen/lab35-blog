@@ -19,3 +19,9 @@ export const useDispatch = () => {
 
   return dispatch;
 };
+
+export const useSelector = selectorFunction => {
+  const { state } = useContext(BlogContext);
+
+  return selectorFunction(state);
+};
