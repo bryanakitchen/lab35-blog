@@ -1,3 +1,4 @@
+import { CREATE_POST, createPost } from './postActions.js';
 
 describe('Blog Actions', () => {
   it('Creates a blog post action', () => {
