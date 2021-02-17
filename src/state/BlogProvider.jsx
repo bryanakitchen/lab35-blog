@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 
 const BlogContext = createContext(null);
 
@@ -11,4 +11,10 @@ export const BlogProvider = ({ children }) => {
       {children}
     </BlogContext.Provider>
   );
+};
+
+export const useDispatch = () => {
+  const { dispatch } = useContext(BlogContext);
+
+  return dispatch;
 };
