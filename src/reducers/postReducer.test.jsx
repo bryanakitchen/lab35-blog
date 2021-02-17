@@ -1,4 +1,5 @@
-import { createPost, CREATE_POST } from '../actions/postActions';
+import { createPost } from '../actions/postActions';
+import reducer from './postReducer';
 
 describe('Blog Reducer', () => {
   it('Creates a post using CREATE_POST action in Reducer', () => {
