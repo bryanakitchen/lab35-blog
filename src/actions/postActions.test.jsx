@@ -6,7 +6,7 @@ import {
 } from './postActions.js';
 
 describe('Blog Actions', () => {
-  it('Creates a blog post Action', () => {
+  it('Creates a post Action', () => {
     const action = createPost({
       title: 'My New Post',
       body: 'This is my first and newest post.'
@@ -21,7 +21,7 @@ describe('Blog Actions', () => {
     });
   });
 
-  it('Deletes a blog post Action', () => {
+  it('Deletes a post Action', () => {
     const action = deletePost({
       title: 'My New Post',
       body: 'This is my first and newest post.'
