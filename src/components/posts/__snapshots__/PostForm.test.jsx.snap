@@ -2,10 +2,14 @@
 
 exports[`PostForm component renders PostForm 1`] = `
 <DocumentFragment>
+  <h3>
+    Add a Blog Post
+  </h3>
   <form>
     <input
       placeholder="Title"
       type="text"
+      value=""
     />
     <br />
     <textarea
