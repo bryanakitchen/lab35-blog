@@ -1,3 +1,5 @@
+import { getPosts } from "./postSelectors";
+
 describe('Blog Selectors', () => {
   it('Selects all posts a post selector', () => {
     const state = {
