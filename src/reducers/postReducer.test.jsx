@@ -1,8 +1,8 @@
 import { createPost, deletePost } from '../actions/postActions';
-import reducer from './postReducer';
+import postReducer from './postReducer';
 
 describe('Blog Reducer', () => {
-  it('Creates a post using CREATE_POST action in Reducer', () => {
+  it('Creates a post using CREATE_POST action in postReducer', () => {
     const state = {
       posts: []
     };
@@ -12,7 +12,7 @@ describe('Blog Reducer', () => {
       body: 'Dear Diary, today is Wednesday.'
     });
     
-    const newState = reducer(state, action);
+    const newState = postReducer(state, action);
 
     expect(newState).toEqual({
       posts: [{
@@ -22,7 +22,7 @@ describe('Blog Reducer', () => {
     });
   });
 
-  it('Deletes a post using DELETE_POST action in Reducer', () => {
+  it('Deletes a post using DELETE_POST action in postReducer', () => {
     const state = {
       posts: [{
         title: 'Wednesday Post',
@@ -32,7 +32,7 @@ describe('Blog Reducer', () => {
 
     const action = deletePost('Wednesday Post');
     
-    const newState = reducer(state, action);
+    const newState = postReducer(state, action);
 
     expect(newState).toEqual({
       posts: []
