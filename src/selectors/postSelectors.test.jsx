@@ -1,4 +1,4 @@
-import { getPosts } from "./postSelectors";
+import { getPosts } from './postSelectors';
 
 describe('Blog Selectors', () => {
   it('Selects all posts a post selector', () => {
