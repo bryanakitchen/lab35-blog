@@ -4,7 +4,7 @@ export const initialState = {
   posts: []
 };
 
-export default function postReducer(state, action) {
+export default function postReducer(state = initialState, action) {
   const { posts } = state;
   switch(action.type) {
     case CREATE_POST:
@@ -21,3 +21,14 @@ export default function postReducer(state, action) {
       return state;
   }
 }
+
+
+// const sandboxState = {
+//   posts: [{ 
+//     title: 'hello', 
+//     body: 'words here',
+//     comments: [{
+//       text: 'hey! Cool post'
+//     }]
+//   }]
+// };
