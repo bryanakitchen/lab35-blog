@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostForm component renders PostForm 1`] = `
+<DocumentFragment>
+  <h3>
+    Add a Blog Post
+  </h3>
+  <form>
+    <input
+      placeholder="Title"
+      type="text"
+      value=""
+    />
+    <br />
+    <textarea
+      cols="50"
+      placeholder="Body"
+      rows="10"
+    />
+    <br />
+    <button>
+      Post
+    </button>
+  </form>
+</DocumentFragment>
+`;
