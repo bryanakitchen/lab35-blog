@@ -1,3 +1,5 @@
+import { createComment, CREATE_COMMENT } from './commentActions';
+
 describe('Comment Actions', () => {
   it('Creates a comment Action', () => {
     const action = createComment({
