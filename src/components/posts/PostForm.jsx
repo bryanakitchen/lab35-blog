@@ -9,9 +9,8 @@ export default function PostForm() {
   const [body, setBody] = useState('');
 
   const handleSubmit = e => {
-    e.preventDefault;
-    const post = { title, body };
-    dispatch(createPost(post));
+    e.preventDefault();
+    dispatch(createPost({ title, body }));
   };
 
   return (
