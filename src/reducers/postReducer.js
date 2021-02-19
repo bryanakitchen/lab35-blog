@@ -22,7 +22,6 @@ export default function postReducer(state = initialState, action) {
   }
 }
 
-
 // const sandboxState = {
 //   posts: [{ 
 //     title: 'hello', 

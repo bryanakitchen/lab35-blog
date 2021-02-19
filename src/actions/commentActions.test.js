@@ -12,20 +12,20 @@ describe('Comment Actions', () => {
     expect(action).toEqual({
       type: CREATE_COMMENT,
       payload: {
-        index: 0,
+        postIndex: 0,
         text: 'This is my comment'
       }
     });
   });
 
   it('Deletes a comment Action', () => {
-    const action = deleteComment(0, 'This is my comment');
+    const action = deleteComment(0, 0);
 
     expect(action).toEqual({
       type: DELETE_COMMENT,
       payload: {
-        index: 0,
-        text: 'This is my comment'
+        postIndex: 0,
+        textIndex: 0
       }
     });
   });

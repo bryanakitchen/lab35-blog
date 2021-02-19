@@ -1,7 +1,7 @@
 import { createPost, deletePost } from '../actions/postActions';
 import postReducer from './postReducer';
 
-describe('Blog Reducer', () => {
+describe('Post Reducer', () => {
   it('Creates a post using CREATE_POST action in postReducer', () => {
     const state = {
       posts: []
