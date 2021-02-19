@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getComments } from '../../selectors/commentSelectors';
 import { useSelector } from 'react-redux';
 import Comment from './Comment';
 
-export default function CommentList() {
+export default function CommentList({ postIndex }) {
   const comments = useSelector(getComments);
-  // console.log('COMMENTS before map', comments);
+  console.log('COMMENTS before map', comments);
 
-  const commentElements = comments.comments.map(comment => (
+  const commentElements = comments[postIndex].map((comment, i) => (
     <li key={comment.text}>
-      <Comment {...comment} />
+      <Comment {...comment} commentIndex={i} postIndex={postIndex} />
     </li>
   ));
 
@@ -19,3 +20,7 @@ export default function CommentList() {
     </ul>
   );
 }
+
+CommentList.propTypes = {
+  postIndex: PropTypes.string.isRequired 
+};

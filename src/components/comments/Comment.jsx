@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteComment } from '../../actions/commentActions';
 
-export default function Comment({ text }) {
+export default function Comment({ text, commentIndex, postIndex }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(deleteComment(text));
+    dispatch(deleteComment(postIndex, commentIndex));
   };
   
   return (
@@ -20,4 +20,6 @@ export default function Comment({ text }) {
 
 Comment.propTypes = {
   text: PropTypes.string.isRequired,
+  commentIndex: PropTypes.number.isRequired,
+  postIndex: PropTypes.number.isRequired
 };
