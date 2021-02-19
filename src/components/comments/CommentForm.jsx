@@ -9,7 +9,6 @@ export default function CommentForm({ postIndex }) {
 
   const posts = useSelector(getPosts);
   const selectedPost = posts.posts[postIndex];
-  //   console.log('selectedPost', selectedPost);
 
   const [text, setText] = useState('');
 
