@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { CREATE_COMMENT, DELETE_COMMENT } from '../actions/commentActions';
+import { CREATE_COMMENT, DELETE_ALL_COMMENTS, DELETE_COMMENT } from '../actions/commentActions';
 
 export default function commentReducer(state = {}, action) {
   switch(action.type) {
@@ -21,6 +21,11 @@ export default function commentReducer(state = {}, action) {
           ...state[action.payload.postIndex].slice(action.payload.textIndex + 1),
 
         ]
+      };
+    case DELETE_ALL_COMMENTS:
+      return {
+        ...state,
+        [action.payload.postIndex]: []
       };
     default:
       return state;
