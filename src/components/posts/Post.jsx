@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
 import { Link } from 'react-router-dom';
+import { deleteAllComments } from '../../actions/commentActions';
 
 export default function Post({ title, body, index }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    dispatch(deleteAllComments(index));
     dispatch(deletePost(index));
   };
   
