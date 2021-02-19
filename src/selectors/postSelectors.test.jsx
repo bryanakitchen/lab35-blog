@@ -1,7 +1,7 @@
 import { getPosts } from './postSelectors';
 
-describe('Blog Selectors', () => {
-  it('Selects all posts a post selector', () => {
+describe('Post Selectors', () => {
+  it('Selects all posts via post selector', () => {
     const state = {
       posts: [{
         title: 'Wednesday Post',

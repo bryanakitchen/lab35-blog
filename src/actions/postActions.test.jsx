@@ -5,7 +5,7 @@ import {
   deletePost 
 } from './postActions.js';
 
-describe('Blog Actions', () => {
+describe('Post Actions', () => {
   it('Creates a post Action', () => {
     const action = createPost({
       title: 'My New Post',
