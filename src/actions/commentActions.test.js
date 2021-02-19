@@ -1,7 +1,9 @@
 import { 
   createComment, 
   CREATE_COMMENT, 
+  deleteAllComments, 
   deleteComment, 
+  DELETE_ALL_COMMENTS, 
   DELETE_COMMENT 
 } from './commentActions';
 
@@ -26,6 +28,17 @@ describe('Comment Actions', () => {
       payload: {
         postIndex: 0,
         textIndex: 0
+      }
+    });
+  });
+
+  it('Deletes all comments in one post Action', () => {
+    const action = deleteAllComments(1);
+
+    expect(action).toEqual({
+      type: DELETE_ALL_COMMENTS,
+      payload: {
+        postIndex: 1,
       }
     });
   });

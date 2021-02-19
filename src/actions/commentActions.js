@@ -11,3 +11,10 @@ export const deleteComment = (postIndex, textIndex) => ({
   type: DELETE_COMMENT,
   payload: { postIndex, textIndex }
 });
+
+export const DELETE_ALL_COMMENTS = 'DELETE_ALL_COMMENTS';
+
+export const deleteAllComments = (postIndex) => ({
+  type: DELETE_ALL_COMMENTS,
+  payload: { postIndex }
+});
