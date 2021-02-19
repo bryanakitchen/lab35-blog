@@ -1,6 +1,6 @@
 import React from 'react';
 import { getPosts } from '../../selectors/postSelectors';
-import { useSelector } from '../../state/BlogProvider';
+import { useSelector } from 'react-redux';
 import Post from './Post';
 
 export default function PostList() {

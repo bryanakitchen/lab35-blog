@@ -1,15 +1,17 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import PostForm from './PostForm';
-import { BlogProvider } from '../../state/BlogProvider';
+import { Provider } from 'react-redux';
+import store from '../../../store';
 
 describe('PostForm component', () => {
   afterEach(() => cleanup());
   it('renders PostForm', () => {
     const { asFragment } = render(
-      <BlogProvider>
+      <Provider store={store} >
         <PostForm />
-      </BlogProvider>);
+      </Provider>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });
