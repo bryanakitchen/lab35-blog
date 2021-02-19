@@ -15,19 +15,9 @@ export default function postReducer(state = initialState, action) {
     case DELETE_POST:
       return {
         ...state,
-        posts: posts.filter(post => post.title !== action.payload)
+        posts: posts.filter((_, index) => index !== action.payload)
       };
     default:
       return state;
   }
 }
-
-// const sandboxState = {
-//   posts: [{ 
-//     title: 'hello', 
-//     body: 'words here',
-//     comments: [{
-//       text: 'hey! Cool post'
-//     }]
-//   }]
-// };

@@ -6,12 +6,11 @@ import Comment from './Comment';
 
 export default function CommentList({ postIndex }) {
   const comments = useSelector(getComments);
+  const commentsArray = comments[postIndex] || [];
 
-  const commentObjects = Object.entries(comments);
-
-  const commentElements = commentObjects.map((comment, i) => (
+  const commentElements = commentsArray.map((comment, i) => (
     <li key={i}>
-      <Comment {...comment} commentIndex={i} postIndex={postIndex} />
+      <Comment comment={comment} commentIndex={i} postIndex={postIndex} />
     </li>
   ));
 
