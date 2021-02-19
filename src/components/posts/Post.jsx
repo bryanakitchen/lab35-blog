@@ -8,7 +8,7 @@ export default function Post({ title, body, index }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(deletePost(title));
+    dispatch(deletePost(index));
   };
   
   return (

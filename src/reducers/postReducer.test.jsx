@@ -30,7 +30,7 @@ describe('Post Reducer', () => {
       }]
     };
 
-    const action = deletePost('Wednesday Post');
+    const action = deletePost(0);
     
     const newState = postReducer(state, action);
 
