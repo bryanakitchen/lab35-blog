@@ -24,7 +24,7 @@ describe('Comment Reducer', () => {
   });
 
   // eslint-disable-next-line max-len
-  it.only('Deletes a comment using DELETE_COMMENT action in commentReducer', () => {
+  it('Deletes a comment using DELETE_COMMENT action in commentReducer', () => {
     const state = {
       posts: [{
         title: 'Friday',
