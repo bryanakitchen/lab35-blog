@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
 import { Link } from 'react-router-dom';
 
-export default function Post({ title, body }) {
+export default function Post({ title, body, index }) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ export default function Post({ title, body }) {
   
   return (
     <div>
-      <Link to={`/posts/${title}`} >
+      <Link to={`/posts/${index}`} >
         <h4>{title}</h4>
         <p>{body}</p>
       </Link>
@@ -24,5 +24,6 @@ export default function Post({ title, body }) {
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired
 };

@@ -7,9 +7,9 @@ export default function PostList() {
   const posts = useSelector(getPosts);
   // console.log('POSTS before map', posts);
 
-  const postElements = posts.posts.map(post => (
+  const postElements = posts.posts.map((post, i) => (
     <li key={post.title}>
-      <Post {...post} />
+      <Post {...post} index={i} />
     </li>
   ));
   // console.log('postElements', postElements);
